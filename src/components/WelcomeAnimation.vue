@@ -100,13 +100,16 @@ export default {
 }
 
 .chevron-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   position: absolute;
   bottom: 40px;
   left: 50%;
   right: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  animation: fade-in 0.5s linear 2s forwards, pulse 2s infinite linear;
+  animation: fade-in 0.5s linear 2s forwards;
 }
 
 .chevron {
