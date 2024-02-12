@@ -1,5 +1,9 @@
 <template>
-  <div class="animation-container">
+  <div
+    class="animation-container"
+    :style="{ opacity: animationOpacity }"
+    id="animation-container"
+  >
     <div class="svg-container">
       <svg
         v-if="showAnimation"
@@ -46,7 +50,12 @@
         ></path>
       </svg>
     </div>
-    <div class="chevron-container" v-if="showAnimation">
+    <div
+      class="chevron-container"
+      v-if="showAnimation"
+      @click="hideIntro"
+      id="chevron-container"
+    >
       <svg
         class="chevron"
         xmlns="http://www.w3.org/2000/svg"
@@ -67,12 +76,23 @@ export default {
   data() {
     return {
       showAnimation: false,
+      animationOpacity: 1,
     };
   },
   mounted() {
     this.loadAnimation();
   },
   methods: {
+    hideIntro() {
+      const fadeOutInterval = setInterval(() => {
+        if (this.animationOpacity > 0) {
+          this.animationOpacity -= 0.1;
+        } else {
+          clearInterval(fadeOutInterval);
+        }
+      }, 50);
+    },
+
     loadAnimation() {
       setTimeout(() => {
         this.showAnimation = true;
