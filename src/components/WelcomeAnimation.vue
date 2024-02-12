@@ -90,7 +90,7 @@ export default {
         } else {
           clearInterval(fadeOutInterval);
         }
-      }, 50);
+      }, 25);
     },
 
     loadAnimation() {
