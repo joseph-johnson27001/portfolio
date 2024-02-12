@@ -1,5 +1,8 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <h2>HELLO</h2>
+    <p>Testing out font</p>
+  </div>
 </template>
 
 <script>
@@ -11,6 +14,10 @@ export default {
 <style>
 body {
   background-color: #1d1d20;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat";
+}
+
+#app {
+  color: white;
 }
 </style>
