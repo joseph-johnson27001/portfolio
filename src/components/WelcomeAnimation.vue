@@ -77,7 +77,7 @@ export default {
 #welcome_path {
   stroke-dasharray: 2400;
   stroke-dashoffset: 2400;
-  animation: draw 1.5s linear forwards, fill 0.8s linear 1.5s forwards;
+  animation: draw 2s linear forwards, fill 0.5s linear 2s forwards;
 }
 
 @keyframes draw {
