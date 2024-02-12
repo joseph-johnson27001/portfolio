@@ -5,8 +5,6 @@
         v-if="showAnimation"
         id="welcome_svg"
         xmlns="http://www.w3.org/2000/svg"
-        width="400"
-        height="200"
         viewBox="0 0 1892 382"
         data-inlinesvg=".inlineSvgFile-7"
       >
@@ -91,6 +89,13 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+.svg-container {
+  max-width: 400px;
+  max-height: 200px;
+  width: 100%;
+  margin: 0px 5px;
 }
 
 #welcome_path {
