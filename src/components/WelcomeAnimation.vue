@@ -101,7 +101,7 @@ export default {
 
 .chevron-container {
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -109,9 +109,10 @@ export default {
 }
 
 .chevron {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   fill: rgb(204, 204, 204);
+  cursor: pointer;
 }
 
 @keyframes fade-in {
