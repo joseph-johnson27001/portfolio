@@ -60,7 +60,7 @@ export default {
 #welcome_path {
   stroke-dasharray: 2400;
   stroke-dashoffset: 2000;
-  animation: draw 2s linear forwards, fill 1s linear 2s forwards;
+  animation: draw 1.5s linear forwards, fill 0.8s linear 1.5s forwards;
 }
 
 @keyframes draw {
@@ -70,8 +70,29 @@ export default {
 }
 
 @keyframes fill {
-  to {
-    fill: rgb(204, 204, 204);
+  0% {
+    fill: transparent;
+    fill-opacity: 0;
+  }
+  20% {
+    fill: rgba(204, 204, 204, 0.2); /* 20% opacity of the fill color */
+    fill-opacity: 0.2;
+  }
+  40% {
+    fill: rgba(204, 204, 204, 0.4); /* 40% opacity of the fill color */
+    fill-opacity: 0.4;
+  }
+  60% {
+    fill: rgba(204, 204, 204, 0.6); /* 60% opacity of the fill color */
+    fill-opacity: 0.6;
+  }
+  80% {
+    fill: rgba(204, 204, 204, 0.8); /* 80% opacity of the fill color */
+    fill-opacity: 0.8;
+  }
+  100% {
+    fill: rgb(204, 204, 204); /* 100% opacity of the fill color */
+    fill-opacity: 1;
   }
 }
 </style>
