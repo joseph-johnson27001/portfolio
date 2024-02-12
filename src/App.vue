@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <h2>HELLO</h2>
-    <p>Testing out font</p>
+    <WelcomeAnimation />
   </div>
 </template>
 
 <script>
+import WelcomeAnimation from "./components/WelcomeAnimation.vue";
+
 export default {
   name: "App",
+  components: {
+    WelcomeAnimation,
+  },
 };
 </script>
 
@@ -18,6 +22,7 @@ body {
 }
 
 #app {
+  height: 100vh;
   color: white;
 }
 </style>
