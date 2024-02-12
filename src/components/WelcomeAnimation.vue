@@ -86,11 +86,11 @@ export default {
 
 <style scoped>
 .animation-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  position: relative;
 }
 
 #welcome_path {
@@ -103,6 +103,7 @@ export default {
   position: absolute;
   bottom: 40px;
   left: 50%;
+  right: 50%;
   transform: translateX(-50%);
   opacity: 0;
   animation: fade-in 0.5s linear 2s forwards, pulse 2s infinite linear;
