@@ -59,7 +59,7 @@ export default {
 
 #welcome_path {
   stroke-dasharray: 2400;
-  stroke-dashoffset: 2000;
+  stroke-dashoffset: 2400;
   animation: draw 1.5s linear forwards, fill 0.8s linear 1.5s forwards;
 }
 
@@ -75,23 +75,23 @@ export default {
     fill-opacity: 0;
   }
   20% {
-    fill: rgba(204, 204, 204, 0.2); /* 20% opacity of the fill color */
+    fill: rgba(204, 204, 204, 0.2);
     fill-opacity: 0.2;
   }
   40% {
-    fill: rgba(204, 204, 204, 0.4); /* 40% opacity of the fill color */
+    fill: rgba(204, 204, 204, 0.4);
     fill-opacity: 0.4;
   }
   60% {
-    fill: rgba(204, 204, 204, 0.6); /* 60% opacity of the fill color */
+    fill: rgba(204, 204, 204, 0.6);
     fill-opacity: 0.6;
   }
   80% {
-    fill: rgba(204, 204, 204, 0.8); /* 80% opacity of the fill color */
+    fill: rgba(204, 204, 204, 0.8);
     fill-opacity: 0.8;
   }
   100% {
-    fill: rgb(204, 204, 204); /* 100% opacity of the fill color */
+    fill: rgb(204, 204, 204);
     fill-opacity: 1;
   }
 }
