@@ -105,7 +105,7 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  animation: fade-in 0.5s linear 2s forwards, pulse 2s infinite linear 3s;
+  animation: fade-in 0.5s linear 2s forwards, pulse 2s infinite linear;
 }
 
 .chevron {
@@ -113,6 +113,19 @@ export default {
   height: 32px;
   fill: rgb(204, 204, 204);
   cursor: pointer;
+  animation: pulse 2s infinite linear;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes fade-in {
