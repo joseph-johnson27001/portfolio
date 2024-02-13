@@ -11,13 +11,22 @@
       >
         <h3 class="selected-name">{{ projectName }}</h3>
         <p>{{ projectDescription }}</p>
-        <div class="button-container">
-          <button>Demo</button>
-          <button>Code</button>
+        <div class="button-container" v-if="projectName != 'Introduction'">
+          <a target="_blank"><button>Demo</button></a>
+          <a :href="codeLink" target="_blank"><button>Code</button></a>
+        </div>
+        <div class="button-container" v-else>
+          <a href="mailto:joseph.johnson27001@gmail.com"
+            ><button>Email</button></a
+          >
+
+          <a href="https://github.com/joseph-johnson27001" target="_blank"
+            ><button>Github</button></a
+          >
         </div>
       </div>
       <div class="selection-container">
-        <h3>Select A Project:</h3>
+        <h4>Select A Project:</h4>
         <ul>
           <li
             :class="{ active: projectName === 'YAY Movies!' }"
@@ -63,7 +72,24 @@ export default {
         "Cloud Crypto":
           "Introducing my cryptocurrency tracking application, affectionately named after the place where it all began - Cloud Coffee. Developed using React.js, and powered by Rapid API, Bing News API, and Chart.js, this comprehensive tool offers real-time exchange information and curated news updates for the top 100 cryptocurrencies.",
       },
+      YAYMoviesCodeLink:
+        "https://github.com/joseph-johnson27001/movie_database",
+      pokedexCodeLink: "https://github.com/joseph-johnson27001/Pok-dex",
+      cryptoCodeLink:
+        "https://github.com/joseph-johnson27001/cryptocurrency_tracker",
     };
+  },
+  computed: {
+    codeLink() {
+      if (this.projectName === "YAY Movies!") {
+        return this.YAYMoviesCodeLink;
+      } else if (this.projectName === "Pokédex") {
+        return this.pokedexCodeLink;
+      } else if (this.projectName === "Cloud Crypto") {
+        return this.cryptoCodeLink;
+      }
+      return "#";
+    },
   },
   methods: {
     animateProject(projectName) {
