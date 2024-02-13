@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <WelcomeAnimation />
-    <MainArea />
+    <WelcomeAnimation v-if="shouldShowAnimation" />
+    <MainArea v-else />
   </div>
 </template>
 
@@ -11,9 +11,15 @@ import MainArea from "./components/MainArea.vue";
 
 export default {
   name: "App",
+  inject: ["state"],
   components: {
     WelcomeAnimation,
     MainArea,
+  },
+  computed: {
+    shouldShowAnimation() {
+      return this.state.showAnimation;
+    },
   },
 };
 </script>
@@ -22,6 +28,7 @@ export default {
 body {
   background-color: #1d1d20;
   font-family: "Montserrat";
+  margin: 0px;
 }
 
 #app {

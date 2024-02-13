@@ -1,4 +1,5 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import state from "./store/state";
 
-createApp(App).mount('#app')
+createApp(App).provide("state", state).mount("#app");
