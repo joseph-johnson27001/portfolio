@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="selection-container">
-        <h3>Projects</h3>
+        <h3>Select A Project:</h3>
         <ul>
           <li
             :class="{ active: projectName === 'YAY Movies!' }"
@@ -26,16 +26,16 @@
             YAY Movies!
           </li>
           <li
-            :class="{ active: projectName === 'Pokédex' }"
-            @click="animateProject('Pokédex')"
-          >
-            Pokédex
-          </li>
-          <li
             :class="{ active: projectName === 'Cloud Crypto' }"
             @click="animateProject('Cloud Crypto')"
           >
             Cloud Crypto
+          </li>
+          <li
+            :class="{ active: projectName === 'Pokédex' }"
+            @click="animateProject('Pokédex')"
+          >
+            Pokédex
           </li>
         </ul>
       </div>
@@ -92,7 +92,6 @@ export default {
 
 <style scoped>
 h3 {
-  color: white;
   font-weight: 100;
 }
 .main-area-container {
