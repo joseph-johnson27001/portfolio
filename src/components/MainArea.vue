@@ -4,14 +4,13 @@
       <div class="text-container">
         <h3 class="selected-name">{{ projectName }}</h3>
         <p>{{ projectDescription }}</p>
-        <!-- Buttons for demo and for code -->
       </div>
       <div class="selection-container">
         <h3>Projects</h3>
         <ul>
-          <li>YAY Movies!</li>
-          <li>Cloud Crypto</li>
-          <li>Pokédex</li>
+          <li @click="selectProject('YAY Movies!')">YAY Movies!</li>
+          <li @click="selectProject('Pokédex')">Pokédex</li>
+          <li @click="selectProject('Cloud Crypto')">Cloud Crypto</li>
         </ul>
       </div>
     </div>
@@ -21,13 +20,26 @@
 <script>
 export default {
   name: "MainArea",
-  inject: ["state"],
   data() {
     return {
-      projectName: "YAY Movies!",
+      projectName: "Introduction",
       projectDescription:
-        "Crafted using Vue.js and the Movie Database (TMDb) API, my movie database project offers a user-friendly interface to explore trending, top-rated, upcoming, and new release movies. With seamless navigation and dynamic search capabilities, users can effortlessly discover detailed movie information, including ratings, genres, and production details. Experience the magic of cinema with this immersive movie database.",
+        "Welcome to my portfolio! As a passionate web developer, I've crafted various projects showcasing my skills and creativity. From immersive movie databases to comprehensive cryptocurrency trackers, explore my work and discover the magic of technology.",
+      projectDescriptions: {
+        "YAY Movies!":
+          "Crafted using Vue.js and the Movie Database (TMDb) API, my movie database project offers a user-friendly interface to explore trending, top-rated, upcoming, and new release movies. With seamless navigation and dynamic search capabilities, users can effortlessly discover detailed movie information, including ratings, genres, and production details. Experience the magic of cinema with this immersive movie database.",
+        Pokédex:
+          "Introducing my Pokédex project, engineered with Vue.js and optimized through the PokeAPI. This application grants users full access to every generation of Pokémon, facilitating swift and thorough searches for in-depth creature information. Designed with a keen eye for technical accuracy and seamless functionality, users can delve into a plethora of data encompassing abilities, creature statistics, and other crucial details, ensuring a comprehensive exploration of the Pokémon universe.",
+        "Cloud Crypto":
+          "Introducing my cryptocurrency tracking application, affectionately named after the place where it all began - Cloud Coffee. Developed using React.js, and powered by Rapid API, Bing News API, and Chart.js, this comprehensive tool offers real-time exchange information and curated news updates for the top 100 cryptocurrencies.",
+      },
     };
+  },
+  methods: {
+    selectProject(projectName) {
+      this.projectName = projectName;
+      this.projectDescription = this.projectDescriptions[projectName];
+    },
   },
 };
 </script>
@@ -75,6 +87,8 @@ ul {
 li {
   cursor: pointer;
   margin-bottom: 10px;
+  font-size: 0.9em;
+  line-height: 1.6;
   list-style-type: none;
 }
 
