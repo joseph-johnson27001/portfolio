@@ -139,6 +139,7 @@ h3 {
   grid-template-columns: 2fr 1fr;
   text-align: justify;
   height: 200px;
+  padding: 0px 10px;
 }
 
 .text-container h3 {
@@ -196,7 +197,7 @@ li {
 }
 
 li:hover:not(.active) {
-  color: silver;
+  color: white;
 }
 
 .active {
