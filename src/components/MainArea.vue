@@ -119,6 +119,10 @@ li {
   list-style-type: none;
 }
 
+li:hover:not(.active) {
+  color: silver;
+}
+
 .active {
   color: gold;
 }
