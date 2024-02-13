@@ -92,6 +92,7 @@ export default {
 
 <style scoped>
 h3 {
+  color: white;
   font-weight: 100;
 }
 .main-area-container {
