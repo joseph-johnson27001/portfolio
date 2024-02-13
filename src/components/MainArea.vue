@@ -1,28 +1,35 @@
 <template>
   <div class="main-area-container" :class="{ 'fade-in': fadeIn }">
     <div class="information-container">
-      <div class="text-container">
+      <div
+        class="text-container"
+        :class="{ 'animate-out': animateOut, 'animate-in': animateIn }"
+      >
         <h3 class="selected-name">{{ projectName }}</h3>
         <p>{{ projectDescription }}</p>
+        <div class="button-container">
+          <button>Demo</button>
+          <button>Code</button>
+        </div>
       </div>
       <div class="selection-container">
         <h3>Projects</h3>
         <ul>
           <li
             :class="{ active: projectName === 'YAY Movies!' }"
-            @click="selectProject('YAY Movies!')"
+            @click="animateProject('YAY Movies!')"
           >
             YAY Movies!
           </li>
           <li
             :class="{ active: projectName === 'Pokédex' }"
-            @click="selectProject('Pokédex')"
+            @click="animateProject('Pokédex')"
           >
             Pokédex
           </li>
           <li
             :class="{ active: projectName === 'Cloud Crypto' }"
-            @click="selectProject('Cloud Crypto')"
+            @click="animateProject('Cloud Crypto')"
           >
             Cloud Crypto
           </li>
@@ -41,6 +48,8 @@ export default {
       projectDescription:
         "Welcome to my portfolio! As a passionate web developer, I've crafted various projects showcasing my skills and creativity. From immersive movie databases to comprehensive cryptocurrency trackers, explore my work and discover the magic of technology.",
       fadeIn: false,
+      animateOut: false,
+      animateIn: false,
       projectDescriptions: {
         "YAY Movies!":
           "Crafted using Vue.js and the Movie Database (TMDb) API, my movie database project offers a user-friendly interface to explore trending, top-rated, upcoming, and new release movies. With seamless navigation and dynamic search capabilities, users can effortlessly discover detailed movie information, including ratings, genres, and production details. Experience the magic of cinema with this immersive movie database.",
@@ -52,9 +61,20 @@ export default {
     };
   },
   methods: {
-    selectProject(projectName) {
-      this.projectName = projectName;
-      this.projectDescription = this.projectDescriptions[projectName];
+    animateProject(projectName) {
+      if (!this.animateOut && !this.animateIn) {
+        this.animateOut = true;
+        setTimeout(() => {
+          this.projectName = projectName;
+          this.projectDescription = this.projectDescriptions[projectName];
+          this.animateIn = true;
+          this.animateOut = false;
+          setTimeout(() => {
+            this.animateOut = false;
+            this.animateIn = false;
+          }, 500);
+        }, 300);
+      }
     },
   },
   mounted() {
@@ -101,6 +121,28 @@ h3 {
   padding-left: 30px;
 }
 
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.button-container button {
+  background-color: transparent;
+  color: #d1d1d1;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 100;
+  font-family: "Montserrat";
+}
+
+.button-container button:hover {
+  border-color: gold;
+  color: gold;
+}
+
 .selection-container {
   display: flex;
   flex-direction: column;
@@ -125,5 +167,21 @@ li:hover:not(.active) {
 
 .active {
   color: gold;
+}
+
+.text-container {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.text-container.animate-out {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+
+.text-container.animate-in {
+  opacity: 1;
+  transform: translateX(0);
 }
 </style>
