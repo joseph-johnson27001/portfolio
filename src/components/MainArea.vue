@@ -1,5 +1,9 @@
 <template>
-  <div class="main-area-container" :class="{ 'fade-in': fadeIn }">
+  <div
+    class="main-area-container"
+    :class="{ 'fade-in': fadeIn }"
+    v-if="!this.state.showAnimation"
+  >
     <div class="information-container">
       <div
         class="text-container"
@@ -42,6 +46,7 @@
 <script>
 export default {
   name: "MainArea",
+  inject: ["state"],
   data() {
     return {
       projectName: "Introduction",
@@ -146,7 +151,7 @@ h3 {
 .selection-container {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: end;
 }
 
 ul {
@@ -156,7 +161,7 @@ ul {
 li {
   cursor: pointer;
   margin-bottom: 10px;
-  font-size: 0.9em;
+  font-size: 1em;
   line-height: 1.6;
   list-style-type: none;
 }

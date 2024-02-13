@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <WelcomeAnimation v-if="shouldShowAnimation" />
-    <MainArea v-else />
+    <MainArea />
   </div>
 </template>
 
@@ -33,8 +33,8 @@ body {
 
 #app {
   height: 100vh;
-  color: white;
-  max-width: 1200px;
+  color: #d1d1d1;
+  max-width: 900px;
   margin: auto;
 }
 </style>
