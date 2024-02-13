@@ -134,8 +134,8 @@ export default {
 }
 
 .chevron {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   fill: gold;
   cursor: pointer;
   animation: pulse 1s infinite linear;

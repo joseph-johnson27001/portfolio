@@ -138,6 +138,7 @@ h3 {
   display: grid;
   grid-template-columns: 2fr 1fr;
   text-align: justify;
+  height: 200px;
 }
 
 .text-container h3 {
@@ -167,6 +168,7 @@ h3 {
   cursor: pointer;
   font-weight: 100;
   font-family: "Montserrat";
+  position: relative;
 }
 
 .button-container button:hover {
@@ -182,12 +184,13 @@ h3 {
 
 ul {
   padding-left: 0px;
+  margin-top: 2px;
 }
 
 li {
   cursor: pointer;
   margin-bottom: 10px;
-  font-size: 1em;
+  font-size: 0.95em;
   line-height: 1.2;
   list-style-type: none;
 }
