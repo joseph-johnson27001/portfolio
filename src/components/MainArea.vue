@@ -1,5 +1,5 @@
 <template>
-  <div class="main-area-container">
+  <div class="main-area-container" :class="{ 'fade-in': fadeIn }">
     <div class="information-container">
       <div class="text-container">
         <h3 class="selected-name">{{ projectName }}</h3>
@@ -8,9 +8,24 @@
       <div class="selection-container">
         <h3>Projects</h3>
         <ul>
-          <li @click="selectProject('YAY Movies!')">YAY Movies!</li>
-          <li @click="selectProject('Pokédex')">Pokédex</li>
-          <li @click="selectProject('Cloud Crypto')">Cloud Crypto</li>
+          <li
+            :class="{ active: projectName === 'YAY Movies!' }"
+            @click="selectProject('YAY Movies!')"
+          >
+            YAY Movies!
+          </li>
+          <li
+            :class="{ active: projectName === 'Pokédex' }"
+            @click="selectProject('Pokédex')"
+          >
+            Pokédex
+          </li>
+          <li
+            :class="{ active: projectName === 'Cloud Crypto' }"
+            @click="selectProject('Cloud Crypto')"
+          >
+            Cloud Crypto
+          </li>
         </ul>
       </div>
     </div>
@@ -25,6 +40,7 @@ export default {
       projectName: "Introduction",
       projectDescription:
         "Welcome to my portfolio! As a passionate web developer, I've crafted various projects showcasing my skills and creativity. From immersive movie databases to comprehensive cryptocurrency trackers, explore my work and discover the magic of technology.",
+      fadeIn: false,
       projectDescriptions: {
         "YAY Movies!":
           "Crafted using Vue.js and the Movie Database (TMDb) API, my movie database project offers a user-friendly interface to explore trending, top-rated, upcoming, and new release movies. With seamless navigation and dynamic search capabilities, users can effortlessly discover detailed movie information, including ratings, genres, and production details. Experience the magic of cinema with this immersive movie database.",
@@ -41,6 +57,11 @@ export default {
       this.projectDescription = this.projectDescriptions[projectName];
     },
   },
+  mounted() {
+    setTimeout(() => {
+      this.fadeIn = true;
+    }, 100);
+  },
 };
 </script>
 
@@ -54,6 +75,12 @@ h3 {
   justify-content: center;
   align-items: center;
   height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.fade-in {
+  opacity: 1;
 }
 
 .information-container {
@@ -92,7 +119,7 @@ li {
   list-style-type: none;
 }
 
-li:hover {
+.active {
   color: gold;
 }
 </style>
