@@ -163,7 +163,7 @@ li {
   cursor: pointer;
   margin-bottom: 10px;
   font-size: 1em;
-  line-height: 1.6;
+  line-height: 1.2;
   list-style-type: none;
 }
 
