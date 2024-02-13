@@ -50,16 +50,12 @@
         ></path>
       </svg>
     </div>
-    <div
-      class="chevron-container"
-      v-if="showAnimation"
-      @click="hideIntro"
-      id="chevron-container"
-    >
+    <div class="chevron-container" v-if="showAnimation" id="chevron-container">
       <svg
         class="chevron"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
+        @click="hideIntro"
       >
         <path
           class="chevron-path"
@@ -121,7 +117,7 @@ export default {
 #welcome_path {
   stroke-dasharray: 2400;
   stroke-dashoffset: 2400;
-  animation: draw 2s linear forwards, fill 0.5s linear 2s forwards;
+  animation: draw 1.5s linear forwards, fill 0.5s linear 1.5s forwards;
 }
 
 .chevron-container {
@@ -134,7 +130,7 @@ export default {
   right: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  animation: fade-in 0.5s linear 2s forwards;
+  animation: fade-in 0.5s linear 1.5s forwards;
 }
 
 .chevron {
