@@ -162,7 +162,7 @@ h2 {
 }
 
 .project-heading {
-  color: white;
+  color: #e4e3e3;
   font-weight: 100;
 }
 .main-area-container {
@@ -242,7 +242,7 @@ li {
 }
 
 li:hover:not(.active) {
-  color: white;
+  color: #e4e3e3;
 }
 
 .active {
