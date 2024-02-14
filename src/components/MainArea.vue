@@ -5,11 +5,22 @@
         class="text-container"
         :class="{ 'animate-out': animateOut, 'animate-in': animateIn }"
       >
-        <h3 class="selected-name">{{ projectName }}</h3>
+        <h3 v-if="projectName != 'Darth Vader'" class="selected-name">
+          {{ projectName }}
+        </h3>
+        <h3 v-else style="color: red" class="selected-name">
+          {{ projectName }}
+        </h3>
         <p>{{ projectDescription }}</p>
         <div class="button-container" v-if="projectName != 'Introduction'">
-          <a :href="siteLink" target="_blank"><button>Demo</button></a>
+          <a
+            v-if="projectName == 'Darth Vader'"
+            :href="siteLink"
+            target="_blank"
+            ><button>Design Inspiration</button></a
+          >
           <a :href="codeLink" target="_blank"><button>Code</button></a>
+          <a :href="siteLink" target="_blank"><button>Demo</button></a>
         </div>
         <div class="button-container" v-else>
           <a href="mailto:joseph.johnson27001@gmail.com"
@@ -22,7 +33,7 @@
         </div>
       </div>
       <div class="selection-container">
-        <h4>Select A Project:</h4>
+        <h4 class="project-heading">Select A Project</h4>
         <ul>
           <li
             :class="{ active: projectName === 'YAY Movies!' }"
@@ -41,6 +52,15 @@
             @click="animateProject('Pokédex')"
           >
             Pokédex
+          </li>
+          <li
+            :class="{
+              active: projectName === 'Darth Vader',
+              redText: projectName === 'Darth Vader',
+            }"
+            @click="animateProject('Darth Vader')"
+          >
+            Darth Vader Portfolio
           </li>
         </ul>
       </div>
@@ -67,14 +87,19 @@ export default {
           "Introducing my Pokédex project, engineered with Vue.js and optimized through the PokeAPI. This application grants users full access to every generation of Pokémon, facilitating swift and thorough searches for in-depth creature information. Designed with a keen eye for technical accuracy and seamless functionality, users can delve into a plethora of data encompassing abilities, creature statistics, and other crucial details, ensuring a comprehensive exploration of the Pokémon universe.",
         "Cloud Crypto":
           "Introducing my cryptocurrency tracking application, affectionately named after the place where it all began - Cloud Coffee. Developed using React.js, and powered by Rapid API, Bing News API, and Chart.js, this comprehensive tool offers real-time exchange information and curated news updates for the top 100 cryptocurrencies.",
+        "Darth Vader":
+          " Inspired by the iconic Star Wars character, my portfolio project offers a unique twist on a classic web design found online. Created using pure vanilla JavaScript, this project showcases my ability to incorporate custom graphics and animations with a Star Wars theme.",
       },
       YAYMoviesCodeLink:
         "https://github.com/joseph-johnson27001/movie_database",
       pokedexCodeLink: "https://github.com/joseph-johnson27001/Pok-dex",
       cryptoCodeLink:
         "https://github.com/joseph-johnson27001/cryptocurrency_tracker",
+      darthVaderCodeLink:
+        "https://github.com/joseph-johnson27001/Darth-Vader-Portfolio",
       YAYMoviesSite: "#",
       pokedexSite: "#",
+      darthVaderSite: "#",
       cloudCryptoSite: "https://cloud-crypto.netlify.app/",
     };
   },
@@ -86,6 +111,8 @@ export default {
         return this.pokedexCodeLink;
       } else if (this.projectName === "Cloud Crypto") {
         return this.cryptoCodeLink;
+      } else if (this.projectName === "Darth Vader") {
+        return this.darthVaderCodeLink;
       }
       return "#";
     },
@@ -96,6 +123,8 @@ export default {
         return this.pokedexSite;
       } else if (this.projectName === "Cloud Crypto") {
         return this.cloudCryptoSite;
+      } else if (this.projectName === "Darth Vader") {
+        return this.darthVaderSite;
       }
       return "#";
     },
@@ -127,6 +156,11 @@ export default {
 
 <style scoped>
 h3 {
+  font-weight: 100;
+}
+
+.project-heading {
+  color: white;
   font-weight: 100;
 }
 .main-area-container {
@@ -211,6 +245,10 @@ li:hover:not(.active) {
 
 .active {
   color: gold;
+}
+
+.redText {
+  color: red;
 }
 
 .text-container {
