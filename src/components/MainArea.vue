@@ -12,7 +12,7 @@
         <h3 class="selected-name">{{ projectName }}</h3>
         <p>{{ projectDescription }}</p>
         <div class="button-container" v-if="projectName != 'Introduction'">
-          <a target="_blank"><button>Demo</button></a>
+          <a :href="siteLink" target="_blank"><button>Demo</button></a>
           <a :href="codeLink" target="_blank"><button>Code</button></a>
         </div>
         <div class="button-container" v-else>
@@ -77,6 +77,9 @@ export default {
       pokedexCodeLink: "https://github.com/joseph-johnson27001/Pok-dex",
       cryptoCodeLink:
         "https://github.com/joseph-johnson27001/cryptocurrency_tracker",
+      YAYMoviesSite: "#",
+      pokedexSite: "#",
+      cloudCryptoSite: "https://cloud-crypto.netlify.app/",
     };
   },
   computed: {
@@ -87,6 +90,16 @@ export default {
         return this.pokedexCodeLink;
       } else if (this.projectName === "Cloud Crypto") {
         return this.cryptoCodeLink;
+      }
+      return "#";
+    },
+    siteLink() {
+      if (this.projectName === "YAY Movies!") {
+        return this.YAYMoviesSite;
+      } else if (this.projectName === "Pokédex") {
+        return this.pokedexSite;
+      } else if (this.projectName === "Cloud Crypto") {
+        return this.cloudCryptoSite;
       }
       return "#";
     },
