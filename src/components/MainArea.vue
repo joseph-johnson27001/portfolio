@@ -67,6 +67,22 @@
             Darth Vader Portfolio
           </li>
         </ul>
+        <div
+          class="back-icon"
+          @click="animateProject('About')"
+          v-if="projectName != 'About'"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </div>
@@ -92,7 +108,9 @@ export default {
         "Cloud Crypto":
           "Introducing my cryptocurrency tracking application, affectionately named after the place where it all began - Cloud Coffee. Developed using React.js, and powered by Rapid API, Bing News API, and Chart.js, this comprehensive tool offers real-time exchange information and curated news updates for the top 100 cryptocurrencies.",
         "Darth Vader":
-          " Inspired by the iconic Star Wars character, this Darth Vader portfolio offers a unique twist on a web design found online. Created using pure vanilla JavaScript, this project showcases my ability to incorporate custom graphics and animations with a Star Wars theme.",
+          "Inspired by the iconic Star Wars character, this Darth Vader portfolio offers a unique twist on a web design found online. Created using pure vanilla JavaScript, this project showcases my ability to incorporate custom graphics and animations with a Star Wars theme.",
+        About:
+          "Welcome to my portfolio! As a passionate web developer, I've crafted various projects showcasing my skills and creativity. From immersive movie databases to comprehensive cryptocurrency trackers, explore my work and discover the magic of technology.",
       },
       YAYMoviesCodeLink:
         "https://github.com/joseph-johnson27001/movie_database",
@@ -124,6 +142,7 @@ export default {
       } else if (this.projectName === "Darth Vader") {
         links.codeLink = this.darthVaderCodeLink;
         links.siteLink = this.darthVaderSite;
+        // } else if (this.projectName === "About") {
       } else {
         links.codeLink = "#";
         links.siteLink = "#";
@@ -157,13 +176,13 @@ export default {
 </script>
 
 <style scoped>
-h2 {
+h2,
+h3 {
   font-weight: 100;
 }
 
 .project-heading {
-  color: #e4e3e3;
-  font-weight: 100;
+  color: gold;
 }
 .main-area-container {
   position: relative;
@@ -246,7 +265,7 @@ li:hover:not(.active) {
 }
 
 .active {
-  color: gold;
+  color: white;
 }
 
 .text-container {
@@ -263,5 +282,20 @@ li:hover:not(.active) {
 .text-container.animate-in {
   opacity: 1;
   transform: translateX(0);
+}
+
+.back-icon {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.back-icon svg {
+  fill: #d1d1d1;
+  width: 24px;
+  height: 24px;
+}
+
+.back-icon:hover svg {
+  fill: #e4e3e3;
 }
 </style>
