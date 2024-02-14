@@ -17,11 +17,24 @@
             v-if="projectName == 'Darth Vader'"
             :href="darthVaderInspirationLink"
             target="_blank"
-            ><button>Design Inspiration</button></a
+            ><button class="darth-vader-button">Design Inspiration</button></a
           >
-          <a :href="codeLink" target="_blank"><button>Code</button></a>
-          <a :href="siteLink" target="_blank"><button>Demo</button></a>
+          <a :href="codeLink" target="_blank"
+            ><button
+              :class="{ 'darth-vader-button': projectName === 'Darth Vader' }"
+            >
+              Code
+            </button></a
+          >
+          <a :href="siteLink" target="_blank"
+            ><button
+              :class="{ 'darth-vader-button': projectName === 'Darth Vader' }"
+            >
+              Demo
+            </button></a
+          >
         </div>
+
         <div class="button-container" v-else>
           <a href="mailto:joseph.johnson27001@gmail.com"
             ><button>Email</button></a
@@ -215,11 +228,17 @@ h3 {
   font-weight: 100;
   font-family: "Montserrat";
   position: relative;
+  transition: border-color 0.1s linear, color 0.1s linear;
 }
 
 .button-container button:hover {
   border-color: gold;
   color: gold;
+}
+
+.darth-vader-button:hover {
+  border-color: red !important;
+  color: red !important;
 }
 
 .selection-container {
