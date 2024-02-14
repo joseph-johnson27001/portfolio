@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="main-area-container"
-    :class="{ 'fade-in': fadeIn }"
-    v-if="!this.state.showAnimation"
-  >
+  <div class="main-area-container" :class="{ 'fade-in': fadeIn }">
     <div class="information-container">
       <div
         class="text-container"

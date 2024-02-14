@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <WelcomeAnimation v-if="shouldShowAnimation" />
-    <MainArea />
+    <MainArea v-else />
   </div>
 </template>
 

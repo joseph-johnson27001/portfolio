@@ -67,6 +67,8 @@
 </template>
 
 <script>
+import state from "@/store/state";
+
 export default {
   name: "WelcomeAnimation",
   data() {
@@ -87,6 +89,12 @@ export default {
           clearInterval(fadeOutInterval);
         }
       }, 25);
+      this.hideAnimation();
+    },
+    hideAnimation() {
+      setTimeout(() => {
+        state.showAnimation = false;
+      }, 500);
     },
 
     loadAnimation() {
