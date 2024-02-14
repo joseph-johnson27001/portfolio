@@ -12,7 +12,7 @@
           {{ projectName }}
         </h2>
         <p>{{ projectDescription }}</p>
-        <div class="button-container" v-if="projectName != 'About'">
+        <div class="button-container" v-if="projectName != 'Introduction'">
           <a
             v-if="projectName == 'Darth Vader'"
             :href="darthVaderInspirationLink"
