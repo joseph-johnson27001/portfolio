@@ -15,7 +15,7 @@
         <div class="button-container" v-if="projectName != 'Introduction'">
           <a
             v-if="projectName == 'Darth Vader'"
-            :href="siteLink"
+            :href="darthVaderInspirationLink"
             target="_blank"
             ><button>Design Inspiration</button></a
           >
@@ -88,7 +88,7 @@ export default {
         "Cloud Crypto":
           "Introducing my cryptocurrency tracking application, affectionately named after the place where it all began - Cloud Coffee. Developed using React.js, and powered by Rapid API, Bing News API, and Chart.js, this comprehensive tool offers real-time exchange information and curated news updates for the top 100 cryptocurrencies.",
         "Darth Vader":
-          " Inspired by the iconic Star Wars character, my portfolio project offers a unique twist on a classic web design found online. Created using pure vanilla JavaScript, this project showcases my ability to incorporate custom graphics and animations with a Star Wars theme.",
+          " Inspired by the iconic Star Wars character, this Darth Vader portfolio offers a unique twist on a web design found online. Created using pure vanilla JavaScript, this project showcases my ability to incorporate custom graphics and animations with a Star Wars theme.",
       },
       YAYMoviesCodeLink:
         "https://github.com/joseph-johnson27001/movie_database",
@@ -97,6 +97,8 @@ export default {
         "https://github.com/joseph-johnson27001/cryptocurrency_tracker",
       darthVaderCodeLink:
         "https://github.com/joseph-johnson27001/Darth-Vader-Portfolio",
+      darthVaderInspirationLink:
+        "https://dribbble.com/shots/11199542-Neteor-Web-Designer-Portfolio-HTML5/attachments/2805050?mode=media",
       YAYMoviesSite: "#",
       pokedexSite: "#",
       darthVaderSite: "#",
