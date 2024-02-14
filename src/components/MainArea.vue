@@ -68,7 +68,7 @@
           </li>
         </ul>
         <div
-          class="back-icon"
+          class="back-icon fade-in"
           @click="animateProject('Introduction')"
           v-if="projectName != 'Introduction'"
         >
@@ -152,6 +152,12 @@ export default {
   methods: {
     animateProject(projectName) {
       if (!this.animateOut && !this.animateIn) {
+        if (projectName === "Introduction") {
+          const icon = document.querySelector(".back-icon");
+          if (icon) {
+            icon.classList.add("fade-out");
+          }
+        }
         this.animateOut = true;
         setTimeout(() => {
           this.projectName = projectName;
@@ -159,6 +165,12 @@ export default {
           this.animateIn = true;
           this.animateOut = false;
           setTimeout(() => {
+            if (projectName === "Introduction") {
+              const icon = document.querySelector(".back-icon");
+              if (icon) {
+                icon.classList.remove("fade-out");
+              }
+            }
             this.animateOut = false;
             this.animateIn = false;
           }, 500);
@@ -283,10 +295,31 @@ li:hover:not(.active) {
   transform: translateX(0);
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .back-icon {
   cursor: pointer;
   margin-right: 10px;
   height: 100%;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  transition: fill 0.2s linear;
 }
 
 .back-icon svg {
@@ -294,9 +327,19 @@ li:hover:not(.active) {
   width: 24px;
   height: 24px;
   margin-top: 100%;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
 }
 
 .back-icon svg:hover {
-  fill: gold;
+  fill: white;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+
+.fade-out {
+  animation-name: fadeOut;
 }
 </style>
