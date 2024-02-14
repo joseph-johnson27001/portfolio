@@ -69,8 +69,8 @@
         </ul>
         <div
           class="back-icon"
-          @click="animateProject('About')"
-          v-if="projectName != 'About'"
+          @click="animateProject('Introduction')"
+          v-if="projectName != 'Introduction'"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ export default {
   inject: ["state"],
   data() {
     return {
-      projectName: "About",
+      projectName: "Introduction",
       projectDescription:
         "Welcome to my portfolio! As a passionate web developer, I've crafted various projects showcasing my skills and creativity. From immersive movie databases to comprehensive cryptocurrency trackers, explore my work and discover the magic of technology.",
       fadeIn: false,
@@ -109,7 +109,7 @@ export default {
           "Introducing my cryptocurrency tracking application, affectionately named after the place where it all began - Cloud Coffee. Developed using React.js, and powered by Rapid API, Bing News API, and Chart.js, this comprehensive tool offers real-time exchange information and curated news updates for the top 100 cryptocurrencies.",
         "Darth Vader":
           "Inspired by the iconic Star Wars character, this Darth Vader portfolio offers a unique twist on a web design found online. Created using pure vanilla JavaScript, this project showcases my ability to incorporate custom graphics and animations with a Star Wars theme.",
-        About:
+        Introduction:
           "Welcome to my portfolio! As a passionate web developer, I've crafted various projects showcasing my skills and creativity. From immersive movie databases to comprehensive cryptocurrency trackers, explore my work and discover the magic of technology.",
       },
       YAYMoviesCodeLink:
@@ -142,7 +142,6 @@ export default {
       } else if (this.projectName === "Darth Vader") {
         links.codeLink = this.darthVaderCodeLink;
         links.siteLink = this.darthVaderSite;
-        // } else if (this.projectName === "About") {
       } else {
         links.codeLink = "#";
         links.siteLink = "#";
@@ -287,15 +286,17 @@ li:hover:not(.active) {
 .back-icon {
   cursor: pointer;
   margin-right: 10px;
+  height: 100%;
 }
 
 .back-icon svg {
   fill: #d1d1d1;
   width: 24px;
   height: 24px;
+  margin-top: 100%;
 }
 
-.back-icon:hover svg {
-  fill: #e4e3e3;
+.back-icon svg:hover {
+  fill: gold;
 }
 </style>
