@@ -5,10 +5,10 @@
         class="text-container"
         :class="{ 'animate-out': animateOut, 'animate-in': animateIn }"
       >
-        <h2 v-if="projectName != 'Darth Vader'" class="selected-name">
+        <h2 v-if="projectName != 'Darth Vader'">
           {{ projectName }}
         </h2>
-        <h2 v-else style="color: red" class="selected-name">
+        <h2 v-else style="color: red">
           {{ projectName }}
         </h2>
         <p>{{ projectDescription }}</p>
@@ -190,7 +190,7 @@ h3 {
   align-items: center;
   height: 100%;
   opacity: 0;
-  transition: opacity 1.5s ease;
+  transition: opacity 1s ease;
 }
 
 .fade-in {
