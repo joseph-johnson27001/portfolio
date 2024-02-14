@@ -5,33 +5,25 @@
         class="text-container"
         :class="{ 'animate-out': animateOut, 'animate-in': animateIn }"
       >
-        <h3 v-if="projectName != 'Darth Vader'" class="selected-name">
+        <h2 v-if="projectName != 'Darth Vader'" class="selected-name">
           {{ projectName }}
-        </h3>
-        <h3 v-else style="color: red" class="selected-name">
+        </h2>
+        <h2 v-else style="color: red" class="selected-name">
           {{ projectName }}
-        </h3>
+        </h2>
         <p>{{ projectDescription }}</p>
-        <div class="button-container" v-if="projectName != 'Introduction'">
+        <div class="button-container" v-if="projectName != 'About'">
           <a
             v-if="projectName == 'Darth Vader'"
             :href="darthVaderInspirationLink"
             target="_blank"
-            ><button class="darth-vader-button">Design Inspiration</button></a
+            ><button>Design Inspiration</button></a
           >
-          <a :href="codeLink" target="_blank"
-            ><button
-              :class="{ 'darth-vader-button': projectName === 'Darth Vader' }"
-            >
-              Code
-            </button></a
+          <a :href="projectLinks.codeLink" target="_blank"
+            ><button>Code</button></a
           >
-          <a :href="siteLink" target="_blank"
-            ><button
-              :class="{ 'darth-vader-button': projectName === 'Darth Vader' }"
-            >
-              Demo
-            </button></a
+          <a :href="projectLinks.siteLink" target="_blank"
+            ><button>Demo</button></a
           >
         </div>
 
@@ -46,7 +38,7 @@
         </div>
       </div>
       <div class="selection-container">
-        <h4 class="project-heading">Select A Project</h4>
+        <h3 class="project-heading">Projects</h3>
         <ul>
           <li
             :class="{ active: projectName === 'YAY Movies!' }"
@@ -69,7 +61,6 @@
           <li
             :class="{
               active: projectName === 'Darth Vader',
-              redText: projectName === 'Darth Vader',
             }"
             @click="animateProject('Darth Vader')"
           >
@@ -87,7 +78,7 @@ export default {
   inject: ["state"],
   data() {
     return {
-      projectName: "Introduction",
+      projectName: "About",
       projectDescription:
         "Welcome to my portfolio! As a passionate web developer, I've crafted various projects showcasing my skills and creativity. From immersive movie databases to comprehensive cryptocurrency trackers, explore my work and discover the magic of technology.",
       fadeIn: false,
@@ -119,29 +110,25 @@ export default {
     };
   },
   computed: {
-    codeLink() {
+    projectLinks() {
+      let links = {};
       if (this.projectName === "YAY Movies!") {
-        return this.YAYMoviesCodeLink;
+        links.codeLink = this.YAYMoviesCodeLink;
+        links.siteLink = this.YAYMoviesSite;
       } else if (this.projectName === "Pokédex") {
-        return this.pokedexCodeLink;
+        links.codeLink = this.pokedexCodeLink;
+        links.siteLink = this.pokedexSite;
       } else if (this.projectName === "Cloud Crypto") {
-        return this.cryptoCodeLink;
+        links.codeLink = this.cryptoCodeLink;
+        links.siteLink = this.cloudCryptoSite;
       } else if (this.projectName === "Darth Vader") {
-        return this.darthVaderCodeLink;
+        links.codeLink = this.darthVaderCodeLink;
+        links.siteLink = this.darthVaderSite;
+      } else {
+        links.codeLink = "#";
+        links.siteLink = "#";
       }
-      return "#";
-    },
-    siteLink() {
-      if (this.projectName === "YAY Movies!") {
-        return this.YAYMoviesSite;
-      } else if (this.projectName === "Pokédex") {
-        return this.pokedexSite;
-      } else if (this.projectName === "Cloud Crypto") {
-        return this.cloudCryptoSite;
-      } else if (this.projectName === "Darth Vader") {
-        return this.darthVaderSite;
-      }
-      return "#";
+      return links;
     },
   },
   methods: {
@@ -170,7 +157,7 @@ export default {
 </script>
 
 <style scoped>
-h3 {
+h2 {
   font-weight: 100;
 }
 
@@ -200,7 +187,7 @@ h3 {
   padding: 0px 10px;
 }
 
-.text-container h3 {
+.text-container h2 {
   color: gold;
 }
 
@@ -235,12 +222,6 @@ h3 {
   border-color: gold;
   color: gold;
 }
-
-.darth-vader-button:hover {
-  border-color: red !important;
-  color: red !important;
-}
-
 .selection-container {
   display: flex;
   flex-direction: column;
@@ -266,10 +247,6 @@ li:hover:not(.active) {
 
 .active {
   color: gold;
-}
-
-.redText {
-  color: red;
 }
 
 .text-container {

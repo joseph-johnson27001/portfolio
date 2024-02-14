@@ -117,7 +117,7 @@ export default {
 
 .svg-container {
   max-width: 400px;
-  max-height: 200px;
+  max-height: 225px;
   width: 100%;
   margin: 0px 5px;
 }
@@ -138,6 +138,7 @@ export default {
   right: 50%;
   transform: translateX(-50%);
   opacity: 0;
+  padding-right: 28px;
   animation: fade-in 0.6s linear 1.5s forwards;
 }
 
