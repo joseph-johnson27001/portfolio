@@ -67,12 +67,9 @@
             Darth Vader Portfolio
           </li>
         </ul>
-        <div
-          class="back-icon fade-in"
-          @click="animateProject('Introduction')"
-          v-if="projectName != 'Introduction'"
-        >
-          <svg
+        <div class="icons fade-in" v-if="projectName != 'Introduction'">
+          <!-- Back button -->
+          <!-- <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -81,7 +78,37 @@
             <path
               d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
             />
-          </svg>
+          </svg> -->
+
+          <!-- Email Icon -->
+          <a href="mailto:joseph.johnson27001@gmail.com">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              height="30"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M21 3H3a2 2 0 00-2 2v14a2 2 0 002 2h18a2 2 0 002-2V5a2 2 0 00-2-2zM5 7l7 4 7-4M5 17v-7.5l7 4 7-4V17"
+              />
+            </svg>
+          </a>
+
+          <!-- GitHub Icon -->
+          <a href="https://github.com/joseph-johnson27001" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M12 .297C5.382.297 0 5.678 0 12.594c0 5.281 3.438 9.75 8.207 11.344.6.11.793-.258.793-.574 0-.282-.01-1.022-.015-2.004-3.348.727-4.042-1.547-4.042-1.547-.546-1.387-1.332-1.756-1.332-1.756-1.09-.745.083-.73.083-.73 1.205.086 1.838 1.24 1.838 1.24 1.07 1.836 2.807 1.305 3.494.998.108-.775.418-1.305.76-1.605-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.465-2.383 1.236-3.223-.124-.303-.537-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.53 11.53 0 013.016-.41c1.023.006 2.05.137 3.016.41 2.29-1.552 3.297-1.23 3.297-1.23.655 1.652.24 2.873.116 3.176.77.84 1.235 1.913 1.235 3.223 0 4.61-2.805 5.622-5.475 5.92.43.373.81 1.106.81 2.228 0 1.608-.015 2.898-.015 3.292 0 .318.192.691.8.573C20.566 22.344 24 17.875 24 12.594 24 5.678 18.618.297 12 .297z"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
@@ -153,7 +180,7 @@ export default {
     animateProject(projectName) {
       if (!this.animateOut && !this.animateIn) {
         if (projectName === "Introduction") {
-          const icon = document.querySelector(".back-icon");
+          const icon = document.querySelector(".icons");
           if (icon) {
             icon.classList.add("fade-out");
           }
@@ -166,7 +193,7 @@ export default {
           this.animateOut = false;
           setTimeout(() => {
             if (projectName === "Introduction") {
-              const icon = document.querySelector(".back-icon");
+              const icon = document.querySelector(".icons");
               if (icon) {
                 icon.classList.remove("fade-out");
               }
@@ -187,6 +214,15 @@ export default {
 </script>
 
 <style scoped>
+a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
+}
+
+a:hover {
+  text-decoration: none; /* Remove underline on hover */
+  color: inherit; /* Inherit text color on hover */
+}
 h2,
 h3 {
   font-weight: 100;
@@ -314,7 +350,7 @@ li:hover:not(.active) {
   }
 }
 
-.back-icon {
+.icons {
   cursor: pointer;
   margin-right: 10px;
   height: 100%;
@@ -322,7 +358,7 @@ li:hover:not(.active) {
   animation-fill-mode: both;
 }
 
-.back-icon svg {
+.icons svg {
   fill: #d1d1d1;
   width: 24px;
   height: 24px;
@@ -330,9 +366,10 @@ li:hover:not(.active) {
   animation-duration: 0.5s;
   animation-fill-mode: both;
   transition: transform 0.2s linear;
+  padding: 5px;
 }
 
-.back-icon svg:hover {
+.icons svg:hover {
   transform: scale(1.1);
   fill: white;
 }
