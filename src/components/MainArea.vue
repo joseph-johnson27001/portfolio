@@ -215,13 +215,13 @@ export default {
 
 <style scoped>
 a {
-  text-decoration: none; /* Remove underline */
-  color: inherit; /* Inherit text color */
+  text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
-  text-decoration: none; /* Remove underline on hover */
-  color: inherit; /* Inherit text color on hover */
+  text-decoration: none;
+  color: inherit;
 }
 h2,
 h3 {
