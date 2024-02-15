@@ -249,8 +249,8 @@ h3 {
 }
 
 .button-container button:hover {
-  border-color: white;
-  color: white;
+  border-color: gold;
+  color: gold;
 }
 .selection-container {
   display: flex;
