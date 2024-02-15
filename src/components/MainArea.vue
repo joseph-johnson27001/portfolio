@@ -250,7 +250,7 @@ h3 {
   grid-template-columns: 2fr 1fr;
   text-align: justify;
   height: 200px;
-  padding: 0px 10px;
+  padding: 0px 20px;
 }
 
 .text-container h2 {
@@ -358,20 +358,20 @@ li:hover:not(.active) {
   animation-fill-mode: both;
 }
 
-.icons svg {
+.icons a svg {
   fill: #d1d1d1;
   width: 24px;
   height: 24px;
   margin-top: 100%;
   animation-duration: 0.5s;
   animation-fill-mode: both;
-  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, fill 0.2s linear;
   padding: 5px;
 }
 
-.icons svg:hover {
-  transform: scale(1.1);
-  fill: white;
+.icons a svg:hover {
+  transform: scale(1.05);
+  color: white;
 }
 
 .fade-in {
