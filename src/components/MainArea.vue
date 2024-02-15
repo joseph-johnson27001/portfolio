@@ -226,7 +226,7 @@ h3 {
   line-height: 1.6;
   margin-left: 20px;
   border-left: 1px solid #d1d1d1;
-  padding-left: 25px;
+  padding-left: 30px;
 }
 
 .button-container {
@@ -319,7 +319,6 @@ li:hover:not(.active) {
   height: 100%;
   animation-duration: 0.5s;
   animation-fill-mode: both;
-  transition: fill 0.2s linear;
 }
 
 .back-icon svg {
@@ -329,10 +328,12 @@ li:hover:not(.active) {
   margin-top: 100%;
   animation-duration: 0.5s;
   animation-fill-mode: both;
+  transition: transform 0.2s linear;
 }
 
 .back-icon svg:hover {
-  fill: white;
+  transform: scale(1.1);
+  color: white;
 }
 
 .fade-in {
