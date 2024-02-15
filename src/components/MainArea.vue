@@ -249,8 +249,8 @@ h3 {
 }
 
 .button-container button:hover {
-  border-color: gold;
-  color: gold;
+  border-color: white;
+  color: white;
 }
 .selection-container {
   display: flex;
@@ -269,6 +269,7 @@ li {
   font-size: 0.95em;
   line-height: 1.2;
   list-style-type: none;
+  transition: color 0.1s linear;
 }
 
 li:hover:not(.active) {
