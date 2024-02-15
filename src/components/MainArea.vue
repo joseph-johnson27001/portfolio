@@ -333,7 +333,7 @@ li:hover:not(.active) {
 
 .back-icon svg:hover {
   transform: scale(1.1);
-  color: white;
+  fill: white;
 }
 
 .fade-in {
