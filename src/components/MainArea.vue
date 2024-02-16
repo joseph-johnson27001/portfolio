@@ -68,7 +68,8 @@
           </li>
         </ul>
         <div class="icons">
-          <!-- <div class="icons fade-in"> -->
+          <!-- Fade in icons (not appearing on intro page) -->
+          <!-- <div class="icons fade-in" v-if="projectName != 'Introduction'"> -->
           <!-- Back button -->
           <!-- <svg
             xmlns="http://www.w3.org/2000/svg"
