@@ -152,7 +152,8 @@ export default {
         "https://dribbble.com/shots/11199542-Neteor-Web-Designer-Portfolio-HTML5/attachments/2805050?mode=media",
       YAYMoviesSite: "#",
       pokedexSite: "https://joseph-johnson27001.github.io/Pok-dex/",
-      darthVaderSite: "#",
+      darthVaderSite:
+        "https://joseph-johnson27001.github.io/Darth-Vader-Portfolio/",
       cloudCryptoSite: "https://cloud-crypto.netlify.app/",
     };
   },
