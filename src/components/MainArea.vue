@@ -151,7 +151,7 @@ export default {
       darthVaderInspirationLink:
         "https://dribbble.com/shots/11199542-Neteor-Web-Designer-Portfolio-HTML5/attachments/2805050?mode=media",
       YAYMoviesSite: "#",
-      pokedexSite: "#",
+      pokedexSite: "https://joseph-johnson27001.github.io/Pok-dex/",
       darthVaderSite: "#",
       cloudCryptoSite: "https://cloud-crypto.netlify.app/",
     };
