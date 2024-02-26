@@ -67,7 +67,7 @@
             Darth Vader Portfolio
           </li>
         </ul>
-        <div class="icons">
+        <div class="icons fade-in" v-if="projectName != 'Introduction'">
           <!-- Fade in icons (not appearing on intro page) -->
           <!-- <div class="icons fade-in" v-if="projectName != 'Introduction'"> -->
           <!-- Back button -->
