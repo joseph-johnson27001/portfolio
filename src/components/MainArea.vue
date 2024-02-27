@@ -382,4 +382,46 @@ li:hover:not(.active) {
 .fade-out {
   animation-name: fadeOut;
 }
+
+@media screen and (max-width: 768px) {
+  .information-container {
+    display: block;
+    height: auto;
+    padding: 20px;
+  }
+
+  .text-container {
+    max-width: none;
+    padding: 0;
+  }
+
+  .text-container p {
+    margin-left: 0px;
+  }
+
+  .selection-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .selection-container li {
+    padding: 6px;
+  }
+
+  .main-area-container {
+    align-items: flex-start;
+  }
+
+  .icons {
+    display: flex;
+    height: 20px;
+    justify-content: flex-end;
+  }
+
+  .text-container p {
+    border-left: none;
+    padding-left: 0px;
+  }
+}
 </style>

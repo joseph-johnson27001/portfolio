@@ -150,6 +150,12 @@ export default {
   animation: pulse 1s infinite linear;
 }
 
+@media screen and (max-width: 768px) {
+  .svg-container {
+    padding: 20px;
+  }
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1);
