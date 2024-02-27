@@ -40,7 +40,7 @@ body {
 
 @media screen and (max-width: 768px) {
   #app {
-    height: 70vh;
+    height: 80vh;
   }
 }
 </style>

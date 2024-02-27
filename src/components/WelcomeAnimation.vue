@@ -138,7 +138,7 @@ export default {
   right: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  padding-right: 28px;
+  /* padding-right: 28px; */
   animation: fade-in 0.6s linear 1.5s forwards;
 }
 
@@ -153,6 +153,9 @@ export default {
 @media screen and (max-width: 768px) {
   .svg-container {
     padding: 20px;
+  }
+  .chevron-container {
+    padding-right: 0px;
   }
 }
 
