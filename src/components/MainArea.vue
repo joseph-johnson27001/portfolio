@@ -146,14 +146,12 @@ export default {
       pokedexCodeLink: "https://github.com/joseph-johnson27001/Pok-dex",
       cryptoCodeLink:
         "https://github.com/joseph-johnson27001/cryptocurrency_tracker",
-      darthVaderCodeLink:
-        "https://github.com/joseph-johnson27001/Darth-Vader-Portfolio",
+      darthVaderCodeLink: "https://darth-vader-portfolio.netlify.app/",
       darthVaderInspirationLink:
         "https://dribbble.com/shots/11199542-Neteor-Web-Designer-Portfolio-HTML5/attachments/2805050?mode=media",
       YAYMoviesSite: "https://yay-movies-database.netlify.app",
       pokedexSite: "https://pokedex-database.netlify.app/",
-      darthVaderSite:
-        "https://joseph-johnson27001.github.io/Darth-Vader-Portfolio/",
+      darthVaderSite: "https://darth-vader-portfolio.netlify.app/",
       cloudCryptoSite: "https://cloud-crypto.netlify.app/",
     };
   },
