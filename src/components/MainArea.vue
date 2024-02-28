@@ -165,8 +165,7 @@ export default {
       pokedexSite: "https://pokedex-database.netlify.app/",
       darthVaderSite: "https://darth-vader-portfolio.netlify.app/",
       cloudCryptoSite: "https://cloud-crypto.netlify.app/",
-      clicheSite:
-        "https://joseph-johnson27001.github.io/Website/Recent_Work_Folder/Cliche_Business_Company/index.html#",
+      clicheSite: "https://cliche-business-company.netlify.app/",
     };
   },
   computed: {
