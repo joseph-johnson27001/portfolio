@@ -158,7 +158,8 @@ export default {
       pokedexCodeLink: "https://github.com/joseph-johnson27001/Pok-dex",
       cryptoCodeLink:
         "https://github.com/joseph-johnson27001/cryptocurrency_tracker",
-      darthVaderCodeLink: "https://darth-vader-portfolio.netlify.app/",
+      darthVaderCodeLink:
+        "https://github.com/joseph-johnson27001/Darth-Vader-Portfolio",
       darthVaderInspirationLink:
         "https://dribbble.com/shots/11199542-Neteor-Web-Designer-Portfolio-HTML5/attachments/2805050?mode=media",
       YAYMoviesSite: "https://yay-movies-database.netlify.app",
