@@ -139,7 +139,7 @@ export default {
       animateIn: false,
       projectDescriptions: {
         "Cliché Business Company":
-          "This project is a landing page example for a business, built using HTML, CSS, and JavaScript. It showcases a generic corporate website design, featuring commonly used clichés and standard business imagery. The goal was to create a demonstration of a typical business website found online, utilizing basic web development technologies.",
+          "This project is a tongue-in-cheek representation of a typical business landing page, developed using HTML, CSS, and JavaScript. Embracing the clichés of corporate websites, it features all the classic elements you'd expect – from stock photos of smiling employees to buzzword-filled mission statements.",
         "YAY Movies!":
           "Crafted using Vue.js and the Movie Database (TMDb) API, my movie database project offers a user-friendly interface to explore trending, top-rated, upcoming, and new release movies. With seamless navigation and dynamic search capabilities, users can effortlessly discover detailed movie information, including ratings, genres, and production details.",
         Pokédex:
