@@ -319,9 +319,9 @@ ul {
 
 li {
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: 0.95em;
-  line-height: 1.2;
+  line-height: 1.4;
   list-style-type: none;
   transition: color 0.1s linear;
 }
