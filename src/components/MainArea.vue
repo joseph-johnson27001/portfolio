@@ -141,7 +141,7 @@ export default {
         "Cliché Business Company":
           "This project is a tongue-in-cheek representation of a typical business landing page, developed using HTML, CSS, and JavaScript. Embracing the clichés of corporate websites, it features all the classic elements you'd expect – from stock photos of smiling employees to buzzword-filled mission statements.",
         "YAY Movies!":
-          "Crafted using Vue.js and the Movie Database (TMDb) API, my movie database project offers a user-friendly interface to explore trending, top-rated, upcoming, and new release movies. With seamless navigation and dynamic search capabilities, users can effortlessly discover detailed movie information, including ratings, genres, and production details.",
+          "Crafted using Vue.js and the Movie Database (TMDb) API, this movie database project provides a user-friendly interface for exploring trending, top-rated, upcoming, and new release movies. Users can effortlessly access detailed movie information, including ratings, genres, and production details. It offers a straightforward and convenient way to immerse yourself in the world of movies",
         Pokédex:
           "Introducing my Pokédex project, engineered with Vue.js and optimized through the PokeAPI. This application grants users full access to every generation of Pokémon, facilitating swift and thorough searches for in-depth creature information. Designed with a keen eye for technical accuracy and seamless functionality, users can delve into a plethora of data encompassing abilities, creature statistics, and other crucial details, ensuring a comprehensive exploration of the Pokémon universe.",
         "Cloud Crypto":
