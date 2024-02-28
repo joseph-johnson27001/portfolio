@@ -265,7 +265,7 @@ h3 {
 
 .information-container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 8fr 3fr;
   text-align: justify;
   height: 200px;
   padding: 0px 20px;
