@@ -66,6 +66,14 @@
           >
             Darth Vader Portfolio
           </li>
+          <li
+            :class="{
+              active: projectName === 'Cliché Business Company',
+            }"
+            @click="animateProject('Cliché Business Company')"
+          >
+            Cliché Business Company
+          </li>
         </ul>
         <div class="icons fade-in" v-if="projectName != 'Introduction'">
           <!-- Fade in icons (not appearing on intro page) -->
@@ -130,6 +138,8 @@ export default {
       animateOut: false,
       animateIn: false,
       projectDescriptions: {
+        "Cliché Business Company":
+          "This project is a landing page example for a business, built using HTML, CSS, and JavaScript. It showcases a generic corporate website design, featuring commonly used clichés and standard business imagery. The goal was to create a demonstration of a typical business website found online, utilizing basic web development technologies.",
         "YAY Movies!":
           "Crafted using Vue.js and the Movie Database (TMDb) API, my movie database project offers a user-friendly interface to explore trending, top-rated, upcoming, and new release movies. With seamless navigation and dynamic search capabilities, users can effortlessly discover detailed movie information, including ratings, genres, and production details.",
         Pokédex:
@@ -141,6 +151,8 @@ export default {
         Introduction:
           "Welcome to my portfolio! As a passionate web developer, I've crafted various projects showcasing my skills and creativity. From immersive movie databases to comprehensive cryptocurrency trackers, explore my work and discover the magic of technology.",
       },
+      ClicheCodeLink:
+        "https://github.com/joseph-johnson27001/Business-Landing-Page",
       YAYMoviesCodeLink:
         "https://github.com/joseph-johnson27001/movie_database",
       pokedexCodeLink: "https://github.com/joseph-johnson27001/Pok-dex",
@@ -153,6 +165,8 @@ export default {
       pokedexSite: "https://pokedex-database.netlify.app/",
       darthVaderSite: "https://darth-vader-portfolio.netlify.app/",
       cloudCryptoSite: "https://cloud-crypto.netlify.app/",
+      clicheSite:
+        "https://joseph-johnson27001.github.io/Website/Recent_Work_Folder/Cliche_Business_Company/index.html#",
     };
   },
   computed: {
@@ -170,6 +184,9 @@ export default {
       } else if (this.projectName === "Darth Vader") {
         links.codeLink = this.darthVaderCodeLink;
         links.siteLink = this.darthVaderSite;
+      } else if (this.projectName === "Cliché Business Company") {
+        links.codeLink = this.ClicheCodeLink;
+        links.siteLink = this.clicheSite;
       } else {
         links.codeLink = "#";
         links.siteLink = "#";
