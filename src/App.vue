@@ -34,7 +34,7 @@ body {
 #app {
   height: 100vh;
   color: #d1d1d1;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
