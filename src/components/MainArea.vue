@@ -342,7 +342,7 @@ li:hover:not(.active) {
 
 .active {
   color: white;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .text-container {
