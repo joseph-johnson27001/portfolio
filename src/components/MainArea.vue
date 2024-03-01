@@ -31,6 +31,11 @@
           <a href="mailto:joseph.johnson27001@gmail.com"
             ><button>Email</button></a
           >
+          <a
+            href="https://www.linkedin.com/in/joe-johnson-619533206/"
+            target="_blank"
+            ><button>LinkedIn</button></a
+          >
 
           <a href="https://github.com/joseph-johnson27001" target="_blank"
             ><button>Github</button></a
