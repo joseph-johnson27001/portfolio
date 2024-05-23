@@ -340,6 +340,7 @@ h3 {
 ul {
   padding-left: 0px;
   margin-top: 2px;
+  margin-bottom: 0px;
 }
 
 li {
@@ -357,7 +358,7 @@ li:hover:not(.active) {
 
 .active {
   color: white;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .text-container {
