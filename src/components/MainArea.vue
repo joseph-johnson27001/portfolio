@@ -46,6 +46,12 @@
         <h3 class="project-heading">Projects</h3>
         <ul>
           <li
+            :class="{ active: projectName === 'Premier League Tracker' }"
+            @click="animateProject('Premier League Tracker')"
+          >
+            Premier League Tracker
+          </li>
+          <li
             :class="{ active: projectName === 'YAY Movies!' }"
             @click="animateProject('YAY Movies!')"
           >
@@ -149,6 +155,7 @@ export default {
       animateOut: false,
       animateIn: false,
       projectDescriptions: {
+        "Premier League Tracker": "PREMIER LEAGUE STUFF",
         "Cliché Business Company":
           "This project is a tongue-in-cheek representation of a typical business landing page, developed using HTML, CSS, and JavaScript. Embracing the clichés of corporate websites, it features all the classic elements you'd expect – from stock photos of smiling employees to buzzword-filled mission statements.",
         "YAY Movies!":
@@ -162,6 +169,8 @@ export default {
         Introduction:
           "Welcome to my portfolio! As a passionate web developer, I've crafted various projects showcasing my skills and creativity. From immersive movie databases to comprehensive cryptocurrency trackers, explore my work and discover the magic of technology.",
       },
+      PremierLeagueCodeLink:
+        "https://github.com/joseph-johnson27001/my-football",
       ClicheCodeLink:
         "https://github.com/joseph-johnson27001/Business-Landing-Page",
       YAYMoviesCodeLink:
@@ -173,6 +182,7 @@ export default {
         "https://github.com/joseph-johnson27001/Darth-Vader-Portfolio",
       darthVaderInspirationLink:
         "https://dribbble.com/shots/11199542-Neteor-Web-Designer-Portfolio-HTML5/attachments/2805050?mode=media",
+      PremierLeagueSite: "https://my-football.netlify.app/",
       YAYMoviesSite: "https://yay-movies-database.netlify.app",
       pokedexSite: "https://pokedex-database.netlify.app/",
       darthVaderSite: "https://darth-vader-portfolio.netlify.app/",
@@ -186,6 +196,9 @@ export default {
       if (this.projectName === "YAY Movies!") {
         links.codeLink = this.YAYMoviesCodeLink;
         links.siteLink = this.YAYMoviesSite;
+      } else if (this.projectName === "Premier League Tracker") {
+        links.codeLink = this.PremierLeagueCodeLink;
+        links.siteLink = this.PremierLeagueSite;
       } else if (this.projectName === "Pokédex") {
         links.codeLink = this.pokedexCodeLink;
         links.siteLink = this.pokedexSite;
