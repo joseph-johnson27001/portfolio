@@ -156,7 +156,7 @@ export default {
       animateIn: false,
       projectDescriptions: {
         "Premier League Tracker":
-          "Stay updated with the latest news and developments in the Premier League with this app. Built using Vue.js (Vue 3), this application aggregates and displays news for all Premier League teams in a user-friendly format. Currently in development, the app will soon feature real-time updates once the APIs are reactivated upon completion. Explore team news, match updates, and more in this comprehensive football tracker.",
+          "Currently in development, stay updated with the latest news and developments in the Premier League with this app. Built using Vue.js (Vue 3), this application aggregates and displays news for all Premier League teams in a user-friendly format. The app is set to feature real-time updates with the activation of APIs upon final release. Explore team news, match updates, and more in this comprehensive football tracker.",
         "Cliché Business Company":
           "This project is a tongue-in-cheek representation of a typical business landing page, developed using HTML, CSS, and JavaScript. Embracing the clichés of corporate websites, it features all the classic elements you'd expect – from stock photos of smiling employees to buzzword-filled mission statements.",
         "YAY Movies!":
