@@ -115,6 +115,12 @@ export default {
   height: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  .svg-container {
+    padding-bottom: 200px;
+  }
+}
+
 .svg-container {
   max-width: 400px;
   max-height: 225px;
@@ -136,9 +142,9 @@ export default {
   bottom: 40px;
   left: 50%;
   right: 50%;
-  transform: translateX(-50%);
+  top: 95%;
+  transform: translate(-50%, -50%);
   opacity: 0;
-  padding-right: 28px;
   animation: fade-in 0.6s linear 1.5s forwards;
 }
 
@@ -148,15 +154,6 @@ export default {
   fill: gold;
   cursor: pointer;
   animation: pulse 1s infinite linear;
-}
-
-@media screen and (max-width: 768px) {
-  .svg-container {
-    padding: 20px;
-  }
-  .chevron-container {
-    padding-right: 0px;
-  }
 }
 
 @keyframes pulse {

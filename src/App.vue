@@ -37,10 +37,4 @@ body {
   max-width: 1000px;
   margin: auto;
 }
-
-@media screen and (max-width: 768px) {
-  #app {
-    height: 80vh;
-  }
-}
 </style>
