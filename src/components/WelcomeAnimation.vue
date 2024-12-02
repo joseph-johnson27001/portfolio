@@ -112,7 +112,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100dvh;
 }
 
 @media screen and (max-width: 768px) {
@@ -137,6 +137,7 @@ export default {
 .chevron-container {
   width: 100%;
   display: flex;
+  padding-bottom: 10px;
   justify-content: center;
   position: absolute;
   bottom: 40px;

@@ -29,11 +29,10 @@ body {
   background-color: #1d1d20;
   font-family: "Montserrat";
   margin: 0px;
-  height: 100vh;
+  height: 100dvh;
 }
 
 #app {
-  height: 100%;
   color: #d1d1d1;
   max-width: 1000px;
   margin: auto;
