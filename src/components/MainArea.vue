@@ -274,12 +274,13 @@ h3 {
 .project-heading {
   color: gold;
 }
+
 .main-area-container {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100dvh;
   opacity: 0;
   transition: opacity 1s ease;
 }
@@ -398,7 +399,6 @@ li:hover:not(.active) {
 .icons {
   cursor: pointer;
   margin-right: 10px;
-  height: 100%;
   animation-duration: 0.5s;
   animation-fill-mode: both;
 }
@@ -455,12 +455,16 @@ li:hover:not(.active) {
 
   .main-area-container {
     align-items: flex-start;
+    padding-top: 50px;
   }
 
   .icons {
     display: flex;
     height: 20px;
     justify-content: flex-end;
+    position: absolute;
+    top: 0px;
+    right: 10px;
   }
 
   .text-container p {
