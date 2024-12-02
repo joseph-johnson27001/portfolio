@@ -271,6 +271,10 @@ h3 {
   font-weight: 100;
 }
 
+h2 {
+  text-align: left;
+}
+
 .project-heading {
   color: gold;
 }
